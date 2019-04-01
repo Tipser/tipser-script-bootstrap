@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
+    <div id="cart" style="position: sticky; bottom: 0"></div>
+
+    <!-- This is the element where we want to put CMS content (referred to with CSS selector in mountContent function) -->
+    <div class="content-root"></div>
+
+    <!-- This is a marker for tipser product, given tipser product id -->
+    <div data-tipser-pid="5ba2334a781baa0001ccdf33"></div>
+
+    <script>
+        var scriptTag = document.createElement('script');
+        scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js";
+        scriptTag.onload = scriptTag.onreadystatechange = function() {
+            tipser.elements('5075d7715c3d090a90585e87', {
+                    //The configuration of tipser widget comes here
+                    lang: "en"
+                }) //pos id (Tipser user id)
+                .mountCart('#cart') //inserting Tipser cart to the HTML
+                .mountContent("1EKPtrOPeqxLavrhYVtgIk", ".content-root"); //inserting CMS content (referred by contentful id) to the HTML
+        };
+        document.body.appendChild(scriptTag);
+    </script>
+</body>
+</html>
