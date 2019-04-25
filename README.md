@@ -1,6 +1,10 @@
 # tipser-widget-bootstrap
 
-## Running instruction
+## See it live!
+
+https://tipser.github.io/tipser-widget-bootstrap/
+
+## Running locally
 
 1. From command line
 ```
