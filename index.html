@@ -22,8 +22,18 @@
         scriptTag.onload = scriptTag.onreadystatechange = function() {
             tipser.elements('5075d7715c3d090a90585e87', { //pos id (Tipser user id)
                     //The configuration of tipser widget comes here
-                    lang: "en"
+                    lang: "en",
+                    eventsHandlers: {
+                        onError: (error) => {
+                            console.log(error)
+                        },
+                        onAddToCart: ({cartSize, product}) => {
+                            console.log('Hurray, you have added item to cart. ', product);
+                            console.log('Your cart size is now. ', cartSize);
+                        }
+                    }
                 })
+                
                 .mountCart('#cart') //inserting Tipser cart to the HTML
                 .mountContent("1EKPtrOPeqxLavrhYVtgIk", ".content-root"); //inserting CMS content (referred by contentful id) to the HTML
         };
