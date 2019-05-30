@@ -1,6 +1,121 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body> 
+    <!-- styles proposal for more neat looks -->
+    <style>
+
+            @media (min-width: 960px) {
+                .te-product-card .te-product-card-img {
+                    height: 250px;
+                }
+            }
+
+
+            .te-product-card-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 30px;
+            padding: 15px 0;
+            justify-content: flex-start;
+            /* height:  100px; */
+            overflow: hidden;
+            position: relative;
+            /* text-align: left; */
+        }
+
+        .te-product-card .te-product-card-brand {
+            order: -1;
+            font-weight: normal;
+            letter-spacing: 0;
+            color: #999;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .te-product-card .te-product-card-name {
+            height:  unset;
+            white-space: nowrap;
+            text-overflow:  ellipsis;
+            text-transform: none;
+            font-weight: normal;
+            letter-spacing: 0px;
+            font-size: 12px;
+            color: #5f5f5f;
+            overflow: hidden;
+            max-width: 100%;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .te-collection .te-product-card .te-button {
+            margin-top: 14px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            color: #222;
+            border-color: #222;
+            padding: 4px 33px;
+            border-width: 1px;
+            line-height: 25px;
+            display: inline-block;
+            min-width: auto;
+            background: #222;
+            color:  white;
+        }
+
+
+        .te-product-card .te-product-card-price {
+            color: #5f5f5f;
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .te-product-card .te-product-card-sales-price {
+            font-size: 13px;
+        }
+
+        .te-product-card .te-product-card-regular-price {
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .te-product-card .te-button.disabled {
+            background: white;
+            border-color: #eee;
+            border-width:  1px;
+            color: #ccc;
+            border-style: solid;
+        }
+
+        .te-shop .te-shop-menu-item {
+            letter-spacing: 0.5px;
+            padding: 8px 7px;
+            font-weight: 300;
+        }
+
+        .te-collection .te-product-card .te-button:not(.disabled):hover {
+            color:  white;
+            opacity: 0.8;
+            border-color: #222;
+        }
+
+        .te-shop .te-shop-menu-item:hover {}
+
+        .te-product-card .te-product-card-img:hover {
+            transform:  none;
+            opacity: 0.9;
+        }
+
+        .te-product-card .te-product-card-img {
+            transition: opacity 0.3s ease;
+        }
+
+        .te-product-card .te-product-card-img {
+            background-position: center;
+        }
+    </style>
     <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
     <div id="cart" style="position: sticky; bottom: 0"></div>
 
