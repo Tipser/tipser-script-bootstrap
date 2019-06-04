@@ -1,0 +1,34 @@
+#cart {
+    position: fixed;
+    right: 0;
+    top: 121px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: -2px 2px 7px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.cart-icon .tipser-icon.tipser-icon-cart {
+    font-size: 35px;
+}
+
+#cart .cart-icon .tipser-icon .tipser-cart-size-indicator {
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    border: 2px solid #cacaca;
+    border-radius: 50%;
+    line-height: 22px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 13px;
+    background: #fff;
+}
+
+.te-shop {
+    justify-content: center;
+}
+
+#tipser_shop .te-shop .te-shop-collection {
+    width: auto;
+}
