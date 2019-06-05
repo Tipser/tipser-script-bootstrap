@@ -10,3 +10,34 @@ body {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
 }
+
+/* Custom Styles */
+.custom-styles .te-product-card.te-product-card--compact {
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.custom-styles .te-product-card.te-product-card--compact .te-product-card-img {
+    height: 400px;
+}
+
+.custom-styles .te-product-card.te-product-card--compact .te-product-card-brand {
+    color: turquoise;
+}
+
+.custom-styles .te-product-card.te-product-card--compact .te-product-card-price {
+    color: maroon;
+}
+.code {
+    display: block;
+    font-size: 11px;
+    margin: 0 auto;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0 0 0 20px;
+}

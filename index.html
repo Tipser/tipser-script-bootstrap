@@ -31,6 +31,21 @@
     <!-- This is a marker element for tipser shop -->
     <div id="tipser_shop"></div>
 
+    <h2 class="heading">Product compact - custom styles</h2>
+    <p style="text-align: center">Example of custom styles attached to the project, that override Product default styles.
+        <span class="code">.custom-styles .te-product-card.te-product-card--compact {font-size: 20px; max-width: 400px;} </span>
+        
+        <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-img {height: 400px;}</span>
+        
+        <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-brand {color: turquoise;}</span>
+        
+        <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-price {color: maroon;}</span>
+    </p>
+    <!-- This is a marker element for tipser product with compact mode enabled, given tipser product id -->
+    <div data-tipser-pid="5a178b7a8aa0cd37ec7983e7" data-tipser-view="compact" class="custom-styles"></div>
+
+
+
     <script>
         var scriptTag = document.createElement('script');
         scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js";
