@@ -12,20 +12,20 @@ body {
 }
 
 /* Custom Styles */
-.custom-styles .te-product-card.te-product-card--compact {
+.custom-styles .te-product-card.te-product-card-compact {
     font-size: 20px;
     max-width: 400px;
 }
 
-.custom-styles .te-product-card.te-product-card--compact .te-product-card-img {
+.custom-styles .te-product-card.te-product-card-compact .te-product-card-img {
     height: 400px;
 }
 
-.custom-styles .te-product-card.te-product-card--compact .te-product-card-brand {
+.custom-styles .te-product-card.te-product-card-compact .te-product-card-brand {
     color: #5F9F9F;
 }
 
-.custom-styles .te-product-card.te-product-card--compact .te-product-card-price {
+.custom-styles .te-product-card.te-product-card-compact .te-product-card-price {
     color: maroon;
 }
 .code {
