@@ -1,3 +1,4 @@
+
 # tipser-widget-bootstrap
 
 ## See it live!
@@ -13,3 +14,7 @@ http-server
 ```
 
 2. Go to http://localhost:8080 from your browser
+
+## Deployment
+
+To deploy changes simply push changes to `origin/master` git branch. GitHub Pages will use files from it if `gh-pages` branch does not exist.   
