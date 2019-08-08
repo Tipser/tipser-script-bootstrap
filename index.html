@@ -39,11 +39,11 @@
     <h2 class="heading">Product compact - custom styles</h2>
     <p style="text-align: center">Example of custom styles attached to the project, that override Product default styles.
         <span class="code">.custom-styles .te-product-card.te-product-card--compact {font-size: 20px; max-width: 400px;} </span>
-        
+
         <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-img {height: 400px;}</span>
-        
+
         <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-brand {color: #5F9F9F;}</span>
-        
+
         <span class="code">.custom-styles .te-product-card.te-product-card--compact .te-product-card-price {color: maroon;}</span>
     </p>
     <!-- This is a marker element for tipser product with compact mode enabled, given tipser product id -->
@@ -54,21 +54,24 @@
     <script>
         var scriptTag = document.createElement('script');
         scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js";
+        // in case you want to load local dev version of script
+        // scriptTag.src = "http://127.0.0.1:8080/Script-tipser-elements.js";
+
         scriptTag.onload = scriptTag.onreadystatechange = function() {
             tipser.elements('59e86b79b8f3f60a94ecd26a', { //pos id (Tipser user id)
                     //The configuration of tipser widget comes here
                     lang: "en",
                     eventsHandlers: {
-                        onError: (error) => {
-                            console.log(error)
+                        onError: function(error){
+                            console.error(error)
                         },
-                        onAddToCart: ({cartSize, product}) => {
-                            console.log('Hurray, you have added item to cart. ', product);
-                            console.log('Your cart size is now. ', cartSize);
+                        onAddToCart: function(options) {
+                            console.log('Hurray, you have added item to cart. ', options.product);
+                            console.log('Your cart size is now. ', options.cartSize);
                         }
             }
                 })
-                
+
                 .mountCart('#cart') //inserting Tipser cart to the HTML
                 .mountContent("nhAXIaw0222dbQTFyUmdV", ".content-root"); //inserting CMS content (referred by contentful id) to the HTML
         };
