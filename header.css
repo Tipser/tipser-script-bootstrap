@@ -9,7 +9,6 @@
    justify-content: center;
    position:relative;
 }
-
 .te-logo img{
    width:120px;
    margin-right:50px;
@@ -20,13 +19,10 @@
    padding: 0 40px 0 20px;
    position: relative;
 }
-
 .horizontal-menu {
    margin: 0 10px;
    padding: 0;
 }
-
-
 .horizontal-menu .horizontal-item {
    display: inline-block;
    margin: 10px;
@@ -34,14 +30,12 @@
    cursor: pointer;
    transition: color 0.4s ease;
 }
-
 .horizontal-menu .horizontal-item a {
    color: #333;
    text-decoration: none;
    padding: 5px;
    background-color: #f1f1f1;
 }
-
 .horizontal-menu .horizontal-item a:hover {
    background-color: #dedede;
 }

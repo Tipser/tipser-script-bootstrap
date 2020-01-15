@@ -2,57 +2,26 @@
    background: #f2f2f2;
    border-top: 1px solid #dcdee0;
    margin-top: 25px;
-   padding: 10px 50px;
+   padding: 20px 50px;
 }  
-.footer-terms a{
+.footer-links a{
    text-decoration:none;
-   background:transparent;
-   color:#aaa;
-}
-.footer-links-privacy a{
    color:#b8a056;
    margin:0 10px;
 }
-
 .footer-logo{
    display: flex;
    justify-content: space-between;
 }
-.tipser-logo{
-   background-repeat: no-repeat;
-   background-size: 100%;
-   display: inline-block;
-   margin-top: 8px;
-   width: 100px;
-   height: 15px;
-}
-.footer-logo img{
-   width:100px;
-}
-.tipser-icon{
-   margin-left:15px;
-   text-transform: none;
-    line-height: 1;
-}
-.footer-terms-links{
-   margin: 10px 0;
+.tipser-logo img{
+  width: 120px;
 }
 .footer-links{
-   margin-top: 25px;
-    font-size: 12px;
+    font-size: 0.8em;
     text-align: center;
-    text-transform: none;
 }
 .footer-link{
    display: inline-block;
-   margin: 5px;
-   margin-right: 0;
-}
-.footer-link a{
-   cursor: pointer;
-    color: #b8a056;
-    text-transform: none;
-    text-decoration: none;
 }
 .footer-copyrights{
    text-align: center;
