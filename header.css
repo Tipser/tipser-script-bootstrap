@@ -1,12 +1,20 @@
+header a {
+   text-decoration:none;
+   color: #333;
+   padding: 5px;
+   background: #f1f1f1;
+   font-weight:bold;
+}
+
 .header {
    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
    background-color: #fff;
    min-height: 50px;
    margin-bottom:10px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    width: 100%;
-   justify-content: center;
+   justify-content: space-between;
    position:relative;
 }
 
@@ -35,13 +43,21 @@
    transition: color 0.4s ease;
 }
 
-.horizontal-menu .horizontal-item a {
-   color: #333;
-   text-decoration: none;
-   padding: 5px;
-   background-color: #f1f1f1;
-}
+
 
 .horizontal-menu .horizontal-item a:hover {
    background-color: #dedede;
+}
+
+.side-note{
+   display:flex;
+   align-items:center;
+   background:transparent;
+   font-size:0.9em;
+}
+
+
+.side-note img{
+   height:20px;
+   margin-left:10px;
 }
