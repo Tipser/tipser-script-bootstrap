@@ -1,7 +1,7 @@
 header a {
    text-decoration:none;
    color: #333;
-   padding: 5px;
+   padding: 3px;
    background: #f1f1f1;
    font-weight:bold;
 }
@@ -20,7 +20,11 @@ header a {
 
 .te-logo img {
    width:120px;
-   margin-right:50px;
+   margin-right:30px;
+}
+
+.te-logo {
+   background:transparent;
 }
 
 .navigation {
@@ -28,11 +32,13 @@ header a {
    display: flex;
    padding: 0 40px 0 20px;
    position: relative;
+   width:100%;
 }
 
 .horizontal-menu {
-   margin: 0 10px;
+   margin: 0;
    padding: 0;
+   flex-grow:1;
 }
 
 .horizontal-menu .horizontal-item {
@@ -42,8 +48,6 @@ header a {
    cursor: pointer;
    transition: color 0.4s ease;
 }
-
-
 
 .horizontal-menu .horizontal-item a:hover {
    background-color: #dedede;
@@ -55,7 +59,6 @@ header a {
    background:transparent;
    font-size:0.9em;
 }
-
 
 .side-note img{
    height:20px;
