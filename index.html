@@ -62,7 +62,7 @@
 
     <script>
         var scriptTag = document.createElement('script');
-        scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js";
+        scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
         // in case you want to load local dev version of script
         // scriptTag.src = "http://127.0.0.1:8080/Script-tipser-elements.js";
 
@@ -83,7 +83,6 @@
             })
 
                 .mountCart('#cart') //inserting Tipser cart to the HTML
-                .mountContent("nhAXIaw0222dbQTFyUmdV", ".content-root"); //inserting CMS content (referred by contentful id) to the HTML
         };
         document.body.appendChild(scriptTag);
     </script>
