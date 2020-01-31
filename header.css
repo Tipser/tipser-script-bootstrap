@@ -1,47 +1,67 @@
+header a {
+   text-decoration:none;
+   color: #333;
+   padding: 3px;
+   background: #f1f1f1;
+   font-weight:bold;
+}
+
 .header {
    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
    background-color: #fff;
    min-height: 50px;
    margin-bottom:10px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    width: 100%;
-   justify-content: center;
+   justify-content: space-between;
    position:relative;
 }
 
 .te-logo img {
-   width:120px;
-   margin-right:50px;
+   width:100px;
+   margin-right:30px;
+}
+
+.te-logo {
+   background:transparent;
+   margin-left:5px;
 }
 
 .navigation {
    align-items: center;
    display: flex;
-   padding: 0 40px 0 20px;
    position: relative;
+   width:100%;
 }
 
 .horizontal-menu {
-   margin: 0 10px;
+   margin: 0;
    padding: 0;
 }
 
 .horizontal-menu .horizontal-item {
    display: inline-block;
-   margin: 10px;
    font-size: 0.8em;
    cursor: pointer;
    transition: color 0.4s ease;
 }
 
-.horizontal-menu .horizontal-item a {
-   color: #333;
-   text-decoration: none;
-   padding: 5px;
-   background-color: #f1f1f1;
-}
-
 .horizontal-menu .horizontal-item a:hover {
    background-color: #dedede;
+}
+
+.side-note{
+   display:flex;
+   align-items:center;
+   background:transparent;
+   font-size:0.8em;
+   margin-left:auto;
+   margin-right:5px;
+   white-space: nowrap;
+}
+
+.side-note img{
+   height:20px;
+   margin-left:10px;
 }

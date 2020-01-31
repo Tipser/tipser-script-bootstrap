@@ -33,7 +33,10 @@
                 </li>
 
             </ul>
+            <a class="side-note" href="https://www.tipser.com/tipser-elements">Tipser &#128640;
+            </a>
         </nav>
+
     </header>
 
     <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
@@ -51,10 +54,15 @@
 
     <h2 class='heading'>Collection</h2>
     <!-- This is a marker element for tipser Collection, given tipser collection id -->
-    <p data-tipser-cid="5cf51fec561f17000129fcb7" data-tipser-imgsize="1"><a href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </p>
 
-    <h2 class="heading">Collection (1 element)</h2>
-    <div data-tipser-cid="5cf524488643910001afc41a"></div>
+    <div data-tipser-cid="5cf51fec561f17000129fcb7"><a
+            href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
+
+
+    <!-- This is a marker element for tipser Collection with carousel -->
+    <h2 class="heading">Collection with carousel</h2>
+    <div data-tipser-cid="5b9665929d25800a1c9b6b34" data-tipser-carousel><a
+            href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
 
     <h2 class="heading">Store</h2>
     <!-- This is a marker element for tipser shop -->
@@ -64,13 +72,15 @@
         var scriptTag = document.createElement('script');
         scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
         // in case you want to load local dev version of script
-        // scriptTag.src = "http://127.0.0.1:8080/Script-tipser-elements.js";
+        // scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
         scriptTag.onload = scriptTag.onreadystatechange = function () {
             tipser.elements('59e86b79b8f3f60a94ecd26a', { //pos id (Tipser user id)
                 //The configuration of tipser widget comes here
                 env: "prod",
-                lang: "en-US",
+                lang: "sv-SE",
+                openOldDialog: true,
+
                 eventsHandlers: {
                     onError: function (error) {
                         console.error(error)
