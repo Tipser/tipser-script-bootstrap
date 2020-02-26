@@ -35,7 +35,6 @@
                     <a
                             class="link"
                             href="/merchant"
-                            target="_blank"
                             rel="noopener noreferrer"
                     >
                         Merchant onboarding
@@ -69,11 +68,6 @@
                 href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
 
 
-        <!-- This is a marker element for tipser Collection with carousel -->
-        <h2 class="heading">Collection with carousel</h2>
-        <div data-tipser-cid="5b9665929d25800a1c9b6b34" data-tipser-carousel><a
-                href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
-
         <h2 class="heading">Store</h2>
         <!-- This is a marker element for tipser shop -->
         <div id="tipser_shop"></div>
@@ -81,9 +75,9 @@
 
     <script>
         var scriptTag = document.createElement('script');
-        scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
+        // scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
+        scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js"; //<--remove this one and bring latest
         // in case you want to load local dev version of script
-        // scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
         scriptTag.onload = scriptTag.onreadystatechange = function () {
             tipser.elements('59e86b79b8f3f60a94ecd26a', { //pos id (Tipser user id)

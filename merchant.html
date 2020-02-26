@@ -46,7 +46,6 @@
             <a
               class="link"
               href="/merchant"
-              target="_blank"
               rel="noopener noreferrer"
             >
               Merchant onboarding
@@ -58,6 +57,8 @@
         </a>
       </nav>
     </header>
+
+    <div id="cart" style="display: none;"></div>
 
     <div id="content"></div>
 
@@ -99,32 +100,31 @@
     <script>
       var scriptTag = document.createElement("script");
       // scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
+      scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js"; //<--remove this one and bring latest
       // in case you want to load local dev version of script
-      scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
       scriptTag.onload = scriptTag.onreadystatechange = function() {
-        tipser
-          .elements("59e86b79b8f3f60a94ecd26a", {
-            //pos id (Tipser user id)
-            //The configuration of tipser widget comes here
-            env: "prod",
-            lang: "sv-SE",
-            openOldDialog: true,
+        const elements = tipser.elements("59e86b79b8f3f60a94ecd26a", {
+          //pos id (Tipser user id)
+          //The configuration of tipser widget comes here
+          env: "stage",
+          lang: "sv-SE",
+          openOldDialog: true,
 
-            eventsHandlers: {
-              onError: function(error) {
-                console.error(error);
-              },
-              onAddToCart: function(options) {
-                console.log(
-                  "Hurray, you have added item to cart. ",
-                  options.product
-                );
-                console.log("Your cart size is now. ", options.cartSize);
-              }
+          eventsHandlers: {
+            onError: function(error) {
+              console.error(error);
+            },
+            onAddToCart: function(options) {
+              console.log(
+                "Hurray, you have added item to cart. ",
+                options.product
+              );
+              console.log("Your cart size is now. ", options.cartSize);
             }
-          })
-          .openCSMDialog("/instyle");
+          }
+        });
+        setTimeout(() => elements.openDialog("/pricerunner-merchant-onboarding"), 25);
       };
       document.body.appendChild(scriptTag);
     </script>
