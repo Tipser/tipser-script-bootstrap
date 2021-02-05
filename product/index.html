@@ -4,10 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="tipser-elements-adjustments.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../tipser-elements-adjustments.css">
+    <link rel="stylesheet" href="../footer.css">
 
 </head>
 
@@ -31,13 +31,13 @@
                 </li>
                 <li class="horizontal-item">
                     <a class="link" href="https://tipser.github.io/docs/#tipser-elements" target="_blank"
-                        rel="noopener noreferrer">
+                       rel="noopener noreferrer">
                         Documentation
                     </a>
                 </li>
                 <li class="horizontal-item">
                     <a class="link" href="https://github.com/Tipser/tipser-widget-bootstrap" target="_blank"
-                        rel="noopener noreferrer">
+                       rel="noopener noreferrer">
                         GitHub repo
                     </a>
                 </li>
@@ -50,35 +50,9 @@
 
     </header>
 
-    <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
-
-
-    <section id="root">
-        <a href="/product?productId=5c6ff65d75afb80001816edc">product</a>
-        <h2 class="heading">Product</h2>
-        <!-- This is a marker element for tipser product, given tipser product id -->
-        <div data-tipser-pid="5c6ff65d75afb80001816edc"></div>
-
-        <h2 class="heading">Product compact</h2>
-        <!-- This is a marker element for tipser product with compact mode enabled, given tipser product id -->
-        <div data-tipser-pid="59083a8f60689325d8727ad9" data-tipser-view="compact"></div>
-
-        <h2 class='heading'>Collection</h2>
-        <!-- This is a marker element for tipser Collection, given tipser collection id -->
-
-        <div data-tipser-cid="5cf51fec561f17000129fcb7"><a
-                href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
-
-
-        <!-- This is a marker element for tipser Collection with carousel -->
-        <h2 class="heading">Collection with carousel</h2>
-        <div data-tipser-cid="5b9665929d25800a1c9b6b34" data-tipser-carousel><a
-                href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </div>
-
-        <h2 class="heading">Store</h2>
-        <!-- This is a marker element for tipser shop -->
-        <div id="tipser_shop"></div>
-    </section>
+    <div id="content-root">
+        <h2 class="heading">Product Page</h2>
+    </div>
 
     <script>
         var scriptTag = document.createElement('script');
@@ -92,11 +66,7 @@
                 env: "prod",
                 lang: "sv-SE",
                 openOldDialog: false,
-                customUrls: {
-                    productBaseUrl: `/product/`,
-                    // checkoutConfirmationUrl: "/checkout-confirmation",
-                    // checkoutUrl: "/checkout",
-                },
+
                 eventsHandlers: {
                     onError: function (error) {
                         console.error(error)
@@ -107,23 +77,29 @@
                     }
                 }
             })
-
                 .mountCart('#cart') //inserting Tipser cart to the HTML
         };
         document.body.appendChild(scriptTag);
     </script>
+    <script>
+    // Reading productId from query string
+        const productId = window.location.search.substring(1).split("=")[1];
+        const productElement = document.createElement('div');
+        productElement.setAttribute('data-tipser-product-page', productId);
+        document.getElementById('content-root').appendChild(productElement);
+    </script>
 
     <div class="footer-terms">
         <div class="footer-logo"><a href="/" class="tipser-logo">
-                <img src="https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png" alt="">
-            </a>
+            <img src="https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png" alt="">
+        </a>
         </div>
-        <div class="footer-links "><a href="https://www.tipser.com/terms" target="_blank" class="footer-link">Conditions
-                of Use and Sale</a><a href="https://www.tipser.com/terms-privacy" target="_blank"
-                class="footer-link">Privacy notice</a><a href="https://www.tipser.com/imprint" target="_blank"
-                class="footer-link">Imprint</a><a href="https://www.tipser.com/terms-cookies" target="_blank"
-                class="footer-link">Cookies &amp;
-                Analytics</a></div>
+        <div class="footer-links ">
+            <a href="https://www.tipser.com/terms" target="_blank" class="footer-link">Conditions of Use and Sale</a>
+            <a href="https://www.tipser.com/terms-privacy" target="_blank" class="footer-link">Privacy notice</a>
+            <a href="https://www.tipser.com/imprint" target="_blank" class="footer-link">Imprint</a>
+            <a href="https://www.tipser.com/terms-cookies" target="_blank" class="footer-link">Cookies &amp; Analytics</a>
+        </div>
         <div class="footer-copyrights">© 2011 - 2019, Tipser AB</div>
     </div>
 
