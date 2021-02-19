@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="horizontal-item">
-                    <a class="link" href="/product">
+                    <a class="link" href="/product?productId=5c6ff65d75afb80001816edc">
                         Product
                     </a>
                 </li>
@@ -66,7 +66,9 @@
                 env: "prod",
                 lang: "sv-SE",
                 openOldDialog: false,
-
+                customUrls: {
+                    productBaseUrl: (productId) => `/product?productId=${productId}`,
+                },
                 eventsHandlers: {
                     onError: function (error) {
                         console.error(error)
@@ -77,6 +79,7 @@
                     }
                 }
             })
+
                 .mountCart('#cart') //inserting Tipser cart to the HTML
         };
         document.body.appendChild(scriptTag);
