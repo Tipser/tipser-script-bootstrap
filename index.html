@@ -56,7 +56,7 @@
 
     <h2 class="heading">Product</h2>
 <!--     This is a marker element for tipser product, given tipser product id -->
-    <div data-tipser-pid="5c6ff65d75afb80001816edc"></div>
+    <div data-tipser-pid="5fbf6b5c3c510a0001d950c5"></div>
 
 <!--    <h2 class="heading">Product compact</h2>-->
 <!--    &lt;!&ndash; This is a marker element for tipser product with compact mode enabled, given tipser product id &ndash;&gt;-->
@@ -89,11 +89,12 @@
         // scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
         scriptTag.onload = scriptTag.onreadystatechange = function () {
-            tipser.elements('5f738fdd023072000132ae3b', { //pos id (Tipser user id)
+            tipser.elements('5f02feb046f7240001d1c51c', { //pos id (Tipser user id)
                 //The configuration of tipser widget comes here
-                env: "prod",
+                env: "stage",
                 lang: "sv-SE",
-                enableCheckoutV2: true
+                enableCheckoutV2: true,
+                openOldDialog: false
             })
         };
         document.body.appendChild(scriptTag);
