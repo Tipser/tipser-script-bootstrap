@@ -60,16 +60,15 @@
 
 <script>
     var scriptTag = document.createElement('script');
-    scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
+    scriptTag.src = "https://cdn.tipser.com/tipser-script/v3-dev/tipser-script.min.js";
     // in case you want to load local dev version of script
     // scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
     scriptTag.onload = scriptTag.onreadystatechange = function () {
-        tipser.elements('5f738fdd023072000132ae3b', { //pos id (Tipser user id)
+        tipserScript.initialize('5f738fdd023072000132ae3b', { //pos id (Tipser user id)
             //The configuration of tipser widget comes here
             env: "prod",
             lang: "sv-SE",
-            openOldDialog: false,
 
             eventsHandlers: {
                 onError: function (error) {
