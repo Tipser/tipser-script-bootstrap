@@ -3,7 +3,7 @@
 
 ## See it live!
 
-https://tipser.github.io/tipser-widget-bootstrap/
+https://tipser.github.io/tipser-script-bootstrap/
 
 ## Running locally
 
