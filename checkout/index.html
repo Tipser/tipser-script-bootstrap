@@ -16,7 +16,7 @@
 <header class="header">
     <nav class="navigation">
         <a class="te-logo" href="/">
-            <img src='https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png' alt="Tipser" />
+            <img src='https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png' alt="Tipser"/>
         </a>
         <ul class="horizontal-menu">
             <li class="horizontal-item">
@@ -50,13 +50,13 @@
 </header>
 
 <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
-<div id="cart"></div>
+<div data-tipser-cart-icon></div>
 
 <div class="content-root"></div>
 
 <h2 class="heading">Checkout</h2>
 <!-- This is a marker element for embeded checkout -->
-<div id="tipser_checkout"></div>
+<div data-tipser-checkout-page></div>
 
 <script>
     var scriptTag = document.createElement('script');
@@ -67,21 +67,9 @@
     scriptTag.onload = scriptTag.onreadystatechange = function () {
         tipserScript.initialize('5f738fdd023072000132ae3b', { //pos id (Tipser user id)
             //The configuration of tipser widget comes here
-            env: "prod",
-            lang: "sv-SE",
-
-            eventsHandlers: {
-                onError: function (error) {
-                    console.error(error)
-                },
-                onAddToCart: function (options) {
-                    console.log('Hurray, you have added item to cart. ', options.product);
-                    console.log('Your cart size is now. ', options.cartSize);
-                }
-            }
+            env: "stage",
+            lang: "sv-SE"
         })
-
-            .mountCart('#cart') //inserting Tipser cart to the HTML
     };
     document.body.appendChild(scriptTag);
 </script>
@@ -93,9 +81,11 @@
     </div>
     <div class="footer-links "><a href="https://www.tipser.com/terms" target="_blank" class="footer-link">Conditions
         of Use and Sale</a><a href="https://www.tipser.com/terms-privacy" target="_blank"
-                              class="footer-link">Privacy notice</a><a href="https://www.tipser.com/imprint" target="_blank"
-                                                                       class="footer-link">Imprint</a><a href="https://www.tipser.com/terms-cookies" target="_blank"
-                                                                                                         class="footer-link">Cookies &amp;
+                              class="footer-link">Privacy notice</a><a href="https://www.tipser.com/imprint"
+                                                                       target="_blank"
+                                                                       class="footer-link">Imprint</a><a
+            href="https://www.tipser.com/terms-cookies" target="_blank"
+            class="footer-link">Cookies &amp;
         Analytics</a></div>
     <div class="footer-copyrights">© 2011 - 2019, Tipser AB</div>
 </div>
