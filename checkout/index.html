@@ -60,15 +60,15 @@
 
 <script>
     var scriptTag = document.createElement('script');
-    scriptTag.src = "https://cdn.tipser.com/tipser-script/v3-dev/tipser-script.min.js";
+    scriptTag.src = "https://cdn.tipser.com/tipser-script/v4-dev/tipser-script.min.js";
     // in case you want to load local dev version of script
     // scriptTag.src = "http://127.0.0.1:5001/Script-tipser-elements.js";
 
     scriptTag.onload = scriptTag.onreadystatechange = function () {
-        tipserScript.initialize('5f738fdd023072000132ae3b', { //pos id (Tipser user id)
+        tipserScript.initialize('603379b8e3078600011e85c9', { //pos id (Tipser user id)
             //The configuration of tipser widget comes here
             env: "stage",
-            lang: "sv-SE"
+            lang: "en-US"
         })
     };
     document.body.appendChild(scriptTag);
